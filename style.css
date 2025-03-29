@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F9FAFB;
+    color: #333333;
+}
+
+h1, h2, h3 {
+    padding-left: 10px;
+    scroll-margin-top: 100px;
+    color: #4F46E5;
+}
+
+a {
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #10B981;
+}
+
+p {
+    padding-left: 10px;
+    color: #374151;
+}
+
+.parallax {
+    background-image: url("/Photos/Filler Banner.jpg");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.7);
+}
+
+.parallax-text {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    padding: 10;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.navigation {
+    background-color: rgba(255, 255, 255);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation a {
+    float: center;
+    color: #3B82F6;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #10B981;
+}
+
+.introPhoto img {
+    height: 10%;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scrollingSkillsContainer {
+    display: inline-block;
+    overflow-x: hidden;
+    padding-right: 20px;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(
+        to right,
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 1) 10%,
+        hsl(0 0% 0% / 1) 90%,
+        hsl(0 0% 0% / 0)
+    );
+}
+
+.scrollingSkills {
+    display: inline-block;
+    animation: slide 30s linear infinite;
+    will-change: transform;
+}
+
+.scrollingSkills img {
+    height: 10%;
+    padding-right: 80px;
+    transition: transform 0.3s ease;
+}
+
+footer {
+    background-color: #FFFFFF;
+    color: #333333;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #E5E7EB;
+}
+
+table {
+    border: 1px solid #D1D5DB;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+hr {
+    border: 1px solid #E5E7EB;
+}
