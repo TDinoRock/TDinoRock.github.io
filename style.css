@@ -8,8 +8,11 @@ body {
 
 h1, h2, h3 {
     padding-left: 10px;
+    color: #466be5;
+}
+
+#projects, #skills, #previous {
     scroll-margin-top: 100px;
-    color: #4F46E5;
 }
 
 a {
@@ -18,24 +21,28 @@ a {
 }
 
 a:hover {
-    color: #10B981;
+    color: #2161c9;
+    text-decoration: none;
 }
 
 p {
     padding-left: 10px;
-    color: #374151;
+    color: #ffffff;
 }
 
 .parallax {
     background-image: url("/Photos/Filler Banner.jpg");
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
     background-attachment: fixed;
-    background-position: top;
+    background-position: 0px -100px;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .parallax-text {
@@ -47,7 +54,6 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #FFFFFF;
     text-align: center;
 }
 
@@ -72,8 +78,32 @@ p {
     color: #10B981;
 }
 
-.introPhoto img {
-    height: 10%;
+.introPhoto {
+    width: 50%;
+}
+
+#projects .row {
+    background-image: url('/Photos/Filler Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#previous .card {
+    background-image: url('/Photos/GIMM 270 Self-Portrait.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 @keyframes slide {
@@ -86,9 +116,8 @@ p {
 }
 
 .scrollingSkillsContainer {
-    display: inline-block;
+    background-color: rgb(242, 244, 255);
     overflow-x: hidden;
-    padding-right: 20px;
     white-space: nowrap;
     position: relative;
     mask-image: linear-gradient(
@@ -112,20 +141,28 @@ p {
     transition: transform 0.3s ease;
 }
 
-footer {
-    background-color: #FFFFFF;
-    color: #333333;
+.card-text{
+    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #E5E7EB;
 }
 
-table {
-    border: 1px solid #D1D5DB;
-    color: #333333;
-    background-color: #FFFFFF;
+footer {
+    background-color: #1F2937; /* Dark background for contrast */
+    color: #FFFFFF; /* White text for readability */
+    text-align: center;
+    padding: 40px 0; /* Increased padding for a larger footer */
+    border-top: 1px solid #374151;
+}
+
+footer a {
+    color: #3B82F6; /* Link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #10B981; /* Hover effect for links */
 }
 
 hr {
-    border: 1px solid #E5E7EB;
+    border: 1px solid #a0a0a0;
 }
