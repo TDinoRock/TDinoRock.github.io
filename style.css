@@ -1,3 +1,12 @@
+/* Define accessible colors */
+:root {
+    --link-color: #3B82F6; /* Default link color */
+    --link-hover-color: #10B981; /* Default hover color */
+    --background-color: #1F2937; /* Footer background color */
+    --text-color: #FFFFFF; /* Footer text color */
+}
+/* Add more contrasting colors for the 4.5:1 ratio*/
+
 body {
     margin: 0;
     padding: 0;
@@ -69,13 +78,13 @@ p {
 
 .navigation a {
     float: center;
-    color: #3B82F6;
+    color: var(--link-color);
     padding: 10px 20px;
     font-weight: bold;
 }
 
 .navigation a:hover {
-    color: #10B981;
+    color: var(--link-hover-color);
 }
 
 .introPhoto {
@@ -155,14 +164,22 @@ footer {
 }
 
 footer a {
-    color: #3B82F6; /* Link color */
+    color: var(--link-color); /* Link color */
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #10B981; /* Hover effect for links */
+    color: var(--link-hover-color); /* Hover effect for links */
 }
 
 hr {
     border: 1px solid #a0a0a0;
+}
+
+/* Ensure contrast ratio */
+@media (prefers-contrast: more) {
+    :root {
+        --link-color: #1E40AF; /* Darker blue for better contrast */
+        --link-hover-color: #065F46; /* Darker green for better contrast */
+    }
 }
