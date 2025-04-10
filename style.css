@@ -40,7 +40,7 @@ p {
 }
 
 .parallax {
-    background-image: url("/Photos/Filler Banner.jpg?v=1.0");
+    background-image: url("/Photos/Filler Banner.jpg?v=1.1");
     height: 100vh;
     background-attachment: fixed;
     background-position: 0px -100px;
@@ -92,7 +92,7 @@ p {
 }
 
 #projects .row {
-    background-image: url('/Photos/Filler Banner.jpg?v=1.0');
+    background-image: url('/Photos/Filler Banner.jpg?v=1.1');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ p {
 }
 
 #previous .card {
-    background-image: url('/Photos/GIMM 270 Self-Portrait Update.png?v=1.0');
+    background-image: url('/Photos/GIMM 270 Self-Portrait Update.png?v=1.1');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
