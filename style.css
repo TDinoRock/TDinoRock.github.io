@@ -3,7 +3,7 @@
     --link-color: #3B82F6; /* Default link color */
     --link-hover-color: #10B981; /* Default hover color */
     --background-color: #1F2937; /* Footer background color */
-    --text-color: #FFFFFF; /* Footer text color */
+    --text-color: #FFFFFF; /* Text color */
 }
 /* Add more contrasting colors for the 4.5:1 ratio*/
 
@@ -11,8 +11,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F9FAFB;
-    color: #333333;
 }
 
 h1, h2, h3 {
@@ -32,18 +30,19 @@ h4 {
 }
 
 a {
-    color: #3B82F6;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #2161c9;
+    color: var(--link-hover-color);
     text-decoration: none;
 }
 
 p {
-    color: #ffffff;
+    color: var(--text-color);
     text-align: center;
+    font-size: clamp(0.95rem, 2vw, 1.125rem); 
 }
 
 div iframe {
@@ -53,8 +52,9 @@ div iframe {
 }
 
 .p-4 p {
-    font-size: 14pt;
-    background-color: #00000090;
+    font-size: clamp(0.95rem, 2vw, 1.125rem); 
+    font-size: 16pt;
+    color: var(--background-color);
 }
 
 .card-body iframe {
@@ -64,13 +64,42 @@ div iframe {
     zoom: 80%
 }
 
-.card-body p {
-    background-color: #00000030;
+.card-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* cover the right column */
+    background-color: rgba(255,255,255,0.5);
+    overflow: hidden;
+    height: 0; /* hidden by default */
+    transition: height .5s ease, transform .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Indicator visible above the card */
+.card-indicator {
+    position: absolute;
+    top: 0px;
+    transform: translateX(-50%);
+    color: var(--link-color);
+    padding: 6px;
+    cursor: pointer;
+    z-index: 3;
+    transition: transform .35s ease, opacity .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-text {
-    color: #70a7ff;
-    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .3s ease, transform .3s ease;
 }
 
 .col-md-4 {
@@ -89,12 +118,12 @@ div iframe {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 .parallax-text {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 1;
     padding: 10;
     width: 30%;
@@ -110,18 +139,20 @@ div iframe {
 }
 
 .parallax-text p {
+    font-size: clamp(0.95rem, 2vw, 1.125rem); 
     font-size: 20px;
-    color: #ffffff;
+    color: var(--link-color);
 }
 
 .navigation {
-    background-color: rgba(255, 255, 255);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     text-align: center;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--text-color);
 }
 
 .navigation a {
@@ -139,8 +170,7 @@ div iframe {
     width: 50%;
 }
 
-.accurate-weaponry {
-    background-image: url('/Photos/Filler\ Banner.jpg');
+.mb-4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,78 +178,205 @@ div iframe {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
 }
+
+
+
+.accurate-weaponry {
+    background-image: url('/Photos/Filler\ Banner.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+/* When overlay is visible, reveal text */
+.accurate-weaponry:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.accurate-weaponry:hover .card-indicator,
+.accurate-weaponry:focus .card-indicator,
+.accurate-weaponry:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.accurate-weaponry:hover .card-body,
+.accurate-weaponry:focus .card-body,
+.accurate-weaponry:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 .marine-training-simulator {
     background-image: url('/Videos/Marine\ Training\ Simulator_Cover.png?v=1.1');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    position: relative;
+    overflow: hidden;
 }
+
+/* When overlay is visible, reveal text */
+.marine-training-simulator:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.marine-training-simulator:hover .card-indicator,
+.marine-training-simulator:focus .card-indicator,
+.marine-training-simulator:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.marine-training-simulator:hover .card-body,
+.marine-training-simulator:focus .card-body,
+.marine-training-simulator:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 .brain-rot {
     background-image: url('/Photos/Filler\ Banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* When overlay is visible, reveal text */
+.brain-rot:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.brain-rot:hover .card-indicator,
+.brain-rot:focus .card-indicator,
+.brain-rot:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.brain-rot:hover .card-body,
+.brain-rot:focus .card-body,
+.brain-rot:focus-visible .card-body {
+    height: 100%;
 }
 
 
 
 .soul-burden {
     background-image: url('/Videos/Soul\ Burden_Title.png?v=1.1');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+/* When overlay is visible, reveal text */
+.soul-burden:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.soul-burden:hover .card-indicator,
+.soul-burden:focus .card-indicator,
+.soul-burden:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.soul-burden:hover .card-body,
+.soul-burden:focus .card-body,
+.soul-burden:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 .first-22-years {
     background-image: url('/Videos/First22Years_Title.png?v=1.1');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+/* When overlay is visible, reveal text */
+.first-22-years:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.first-22-years:hover .card-indicator,
+.first-22-years:focus .card-indicator,
+.first-22-years:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.first-22-years:hover .card-body,
+.first-22-years:focus .card-body,
+.first-22-years:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 .twod-platformer {
     background-image: url('/Photos/Filler\ Banner.jpg?v=1.1');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+/* When overlay is visible, reveal text */
+.twod-platformer:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.twod-platformer:hover .card-indicator,
+.twod-platformer:focus .card-indicator,
+.twod-platformer:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.twod-platformer:hover .card-body,
+.twod-platformer:focus .card-body,
+.twod-platformer:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 .ammonite {
     background-image: url('/Videos/Ammonite_Title.png?v=1.1');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+/* When overlay is visible, reveal text */
+.ammonite:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.ammonite:hover .card-indicator,
+.ammonite:focus .card-indicator,
+.ammonite:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.ammonite:hover .card-body,
+.ammonite:focus .card-body,
+.ammonite:focus-visible .card-body {
+    height: 100%;
+}
+
+
 
 @keyframes slide {
     0% {
@@ -257,36 +414,61 @@ div iframe {
 }
 
 footer {
-    background-color: #1F2937; /* Dark background for contrast */
-    color: #FFFFFF; /* White text for readability */
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-align: center;
-    padding: 40px 0; /* Increased padding for a larger footer */
+    padding: 40px 0px;
     border-top: 1px solid #374151;
 }
 
 footer a {
-    color: var(--link-color); /* Link color */
+    color: var(--link-color);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: var(--link-hover-color); /* Hover effect for links */
+    color: var(--link-hover-color);
 }
 
 footer h3 {
     font-size: 40px;
     margin-bottom: 40px;
-    color: #3B82F6;
+    color: var(--link-color);
 }
 
 hr {
     border: 1px solid #a0a0a0;
 }
 
-/* Ensure contrast ratio */
-@media (prefers-contrast: more) {
-    :root {
-        --link-color: #1E40AF; /* Darker blue for better contrast */
-        --link-hover-color: #065F46; /* Darker green for better contrast */
+
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        height: 60vh;
+    }
+
+    .mb-4 {
+        flex-direction: column; /* stack columns */
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .card-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card-body {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .card-indicator {
+        display: none;
     }
 }

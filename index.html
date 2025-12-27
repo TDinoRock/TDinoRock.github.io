@@ -10,8 +10,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
             rel="preconnect" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-        <title>Document</title>
+        <title>Trennon Talbot Portfolio</title>
         <link rel="stylesheet" defer href="style.css" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
         <!-- Added defer to the script tag to ensure the DOM is fully loaded before executing the script -->
         <!-- rel="preconnect" to optimize loading performance. -->
         <!-- add '?v=1.0' to local connections and photos -->
@@ -28,11 +29,11 @@
         <nav class="navigation navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">My Portfolio</a>
+                <a class="navbar-brand" href="https://www.youtube.com/@trennontalbot3638" target="_blank">My YouTube</a>
                 <div class="navbar" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#previous">Past Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Previous Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="art.html">Art/Animation</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,8 +51,10 @@
                 <div class="col-md-6">
                     <h3>
                         My name is Trennon Talbot, and I am a Junior student at Boise State University. My major is in
-                        Games, Interactive Media, and Mobile Technology's, or GIMM for short. Now that introductions
-                        are out of the way, this is my portfolio website showcasing my various programming projects
+                        Games, Interactive Media, and Mobile Technology's, or GIMM for short.
+                    </h3>
+                    <h3>
+                        This is my portfolio website showcasing my various programming projects
                         from 2D Platformer to VR open world. My most recent work has been developing "Accurate Weaponry."
                     </h3>
                 </div>
@@ -61,65 +64,7 @@
 
         <hr>
 
-        <div class="container-fluid my-5" id="projects">
-            <h2>Projects</h2>
-
-            <div class="row mb-4 accurate-weaponry">
-                <div class="col-md-6 p-4">
-                    <h4>Accurate Weaponry</h4>
-                    <p>Video Here</p>
-                </div>
-                <div class="col-md-6 p-4">
-                    <p>
-                        Accurate Weaponry is a physics-based, open-world VR game that redefines medieval combat with a
-                        focus on realistic technique, strength, and endurance. I learned a lot about VR technology and
-                        tracking as well as the difficulty to replicate real-world physics we interact with every day.
-                        I also learned how to program AI to be responsive to specific situations and control their
-                        difficulty. I had a lot of fun researching every weapon's techniques and creating training
-                        exercises to help the player learn how to use them.
-                    </p>
-                    <p>Made in Unity in C# language and with Meta Quest 2 & Quest 3</p>
-                </div>
-            </div>
-
-            <div class="row mb-4 marine-training-simulator">
-                <div class="col-md-6 p-4">
-                    <h4>Marine Training Simulator</h4>
-                    <div><iframe src="https://youtube.com/embed/6C8eVPLb_2Y" frameborder="0" allowfullscreen></iframe></div>
-                </div>
-                <div class="col-md-6 p-4">
-                    <p>
-                        Marine Training Simulator is a very basic 2-player local First Person Shooter. I learned how to
-                        make several different features like ricocheting lasers off shields, creating corresponding UI elements
-                        and indicators for each player. These indicators are for when the player can dash and when the player can shoot.
-                        I also learned a lot about raycasting. There were many frustrations and bugs that I had to work through in such a short time frame,
-                        but I had lots of fun seeing how much fun my classmates had playing it.
-                    </p>
-                    <p>Made in Unity in C# language</p>
-                </div>
-            </div>
-
-            <div class="row mb-4 brain-rot">
-                <div class="col-md-6 p-4">
-                    <h4>Brain Rot</h4>
-                    <p>Video Here</p>
-                </div>
-                <div class="col-md-6 p-4">
-                    <p>
-                        Brain Rot is a short VR game where you are sitting in a classroom listening to a lecture. During
-                        the lecture, brain rot videos start popping up around the player, creating visual and audio distractions.
-                        The player must delete these brain rots and score 100% on the quiz at the end of the lecture.
-                        This project started my drive for VR and what I can create on that platform. So I learned the basics of VR,
-                        picking objects up, and snapping objects to certain locations. I had lots of fun playing it and eliminating the brain rots.
-                    </p>
-                    <p>Made in Unity in C# language and with Meta Quest 2</p>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="container-fluid my-5" id="skills">
+        <div class="container-fluid my-5">
             <h2>Skills</h2>
             <div class="scrollingSkillsContainer">
                 <div class="scrollingSkills">
@@ -153,85 +98,36 @@
 
         <hr>
 
-        <div class="container-fluid my-5" id="previous">
-            <h2>Previous Projects</h2>
-            <div class="row gy-4">
+        <div class="container-fluid my-5">
+            <h2>Recent Projects</h2>
 
-                <div class="col-md-4">
-                    <div class="card soul-burden">
-                        <div class="card-body">
-                            <h5 class="card-title">Game Jam: Soul Burden</h5>
-                            <p class="card-text">
-                                This game was made for a collegiate Game Jam in 2 weeks near the end of the school year.
-                                This 2D Platformer is inspired by the legend of Phosphorus, where the player moves through
-                                Tartarus leading their last figure of humanity safely through the underworld while solving
-                                puzzles, fight enemies, and battle Greek Gods. I learned a lot about player movement, a
-                                following companion, and the code for the first boss of the game Persephone.
-                            </p>
-                            <p>Video Here</p>
-                            <p><strong>Tools Used:</strong> Unity and C#</p>
-                        </div>
+            <div class="row mb-4 accurate-weaponry" tabindex="0" aria-expanded="false">
+                <div class="col-md-6 p-4 order-1 order-md-1">
+                    <h4>Accurate Weaponry</h4>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/6LaMYEZoo90?controls=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card first-22-years">
-                        <div class="card-body">
-                            <p class="card-text">
-                                This is a rotoscoped video of the life of a female human in their first 22 years. This
-                                video took many hours to edit because I did not properly film each scene to make the
-                                rotoscoping easier. I learned a lot about the importance of proper film techniques and a change in
-                                workflow. I had created a scene then filmed rather than the other way. I had fun when we
-                                filmed each scene with the help of my friends and family, and then to see the final product.
-                            </p>
-                            <iframe src="https://www.youtube.com/embed/f6Oj-LnOlyg" frameborder="0" allowfullscreen></iframe>
-                            <p><strong>Tools Used:</strong> Adobe Photoshop, Premiere Pro, After Effects, and Blender
-                            </p>
-                        </div>
+                <div class="col-md-6 p-4 order-2 order-md-2">
+                    <span class="card-indicator material-symbols-outlined fa-10x" aria-hidden="true" title="Show more information">keyboard_arrow_down</span>
+                    <div class="card-body" aria-hidden="true">
+                        <p class="card-text">
+                            Accurate Weaponry is a physics-based, open-world VR game that redefines medieval combat with a
+                            focus on realistic technique, strength, and endurance. I learned a lot about VR technology and
+                            tracking as well as the difficulty to replicate real-world physics we interact with every day.
+                            I also learned how to program AI to be responsive to specific situations and control their
+                            difficulty. I had a lot of fun researching every weapon's techniques and creating training
+                            exercises to help the player learn how to use them.
+                            <br>
+                            <br>
+                            <br>
+                            Made in Unity in C# language with Unity XR Rig then moved to Meta SDK Rig
+                        </p>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card twod-platformer">
-                        <div class="card-body">
-                            <h5 class="card-title">2D Platformer</h5>
-                            <p class="card-text">
-                                This is a 2D platformer with you playing as an Astronaut. A drone is shooting you as you
-                                collect coins; the goal is 100. This was the first game I made in Unity. So, I learned
-                                a lot about the basics of the Unity Engine and the C# language. I had a lot of fun creating
-                                this game and learning about the engine. I also had a lot of fun playing the game; my highest score is 82.
-                            </p>
-                            <p>Video Here</p>
-                            <p><strong>Tools Used:</strong> Unity and C#</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row gy-4">
-
-                <div class="col-md-4">
-                    <div class="card ammonite">
-                        <div class="card-body">
-                            <p class="card-text">
-                                This is a simple animated video of the life of an Ammonite from living to being
-                                displayed in a museum. I learned the importance of
-                                creating multiple layers in both Photoshop and Premiere Pro. I also learned the
-                                importance of non-destructive editing. I had fun
-                                watching the video I completed and getting reactions from my friends who watched it.
-                            </p>
-                            <iframe src="https://www.youtube.com/embed/hv83VE7ULTs" frameborder="0" allowfullscreen></iframe>
-                            <p><strong>Tools Used:</strong> Adobe Photoshop and Premiere Pro</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
         </div>
-
-        <hr>
 
         <footer class="text-center">
             <div class="container py-2">
@@ -247,10 +143,8 @@
                 <hr class="my-4">
                 <p><a href="https://docs.google.com/document/d/1bAlaZyakaetHDShsbk-de7-TqKPCjA-F0Be1yTq8RhU/edit?usp=sharing"
                         target="_blank" rel="noopener noreferrer">View My Resume</a></p>
-                <p><a href="https://www.youtube.com/@trennontalbot3638"
-                        target="_blank" rel="noopener noreferrer">Youtube Channel</a></p>
                 <hr class="my-4">
-                <p>&copy; 2025 Trennon Talbot. All rights reserved.</p>
+                <p>&copy; 2026 Trennon Talbot. All rights reserved.</p>
             </div>
         </footer>
     </body>
