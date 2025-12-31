@@ -69,7 +69,7 @@ div iframe {
     top: 0;
     right: 0;
     width: 50%; /* cover the right column */
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
     overflow: hidden;
     height: 0; /* hidden by default */
     transition: height .5s ease, transform .5s ease;
@@ -323,7 +323,7 @@ div iframe {
 
 
 .twod-platformer {
-    background-image: url('/Photos/Filler\ Banner.jpg?v=1.1');
+    background-image: url('/Videos/TwoD_PlatformerCover.png?v=1.1');
     position: relative;
     overflow: hidden;
 }
@@ -374,6 +374,42 @@ div iframe {
 .ammonite:focus .card-body,
 .ammonite:focus-visible .card-body {
     height: 100%;
+}
+
+.first-rigging {
+    background-image: url('/Photos/Filler\ Banner.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+/* When overlay is visible, reveal text */
+.first-rigging:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover/focus states rotate/move the indicator */
+.first-rigging:hover .card-indicator,
+.first-rigging:focus .card-indicator,
+.first-rigging:focus-visible .card-indicator {
+    transform: translateX(-50%) translateY(8px) rotate(180deg);
+}
+
+/* Slide the overlay down to show content when hovering or focusing the whole card row */
+.first-rigging:hover .card-body,
+.first-rigging:focus .card-body,
+.first-rigging:focus-visible .card-body {
+    height: 100%;
+}
+
+.art {
+    text-align: center;
+}
+
+.art-gallery {
+    background-color: #dddddd;
+    margin: 0px !important;
+    border: var(--text-color) 1px solid;
 }
 
 
