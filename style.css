@@ -11,6 +11,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('/Photos/Filler\ Banner.jpg');
+    background-size: cover;
 }
 
 h1, h2, h3 {
@@ -105,45 +107,7 @@ div iframe {
 .col-md-4 {
     padding: 5px;
 }
-/*
-.parallax {
-    background-image: url("/Photos/Filler Banner.jpg");
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: 0px -100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--text-color);
-}
 
-.parallax-text {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: 1;
-    padding: 10;
-    width: 30%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.parallax-text h1 {
-    font-size: 50px;
-    color: #2448ec;
-}
-
-.parallax-text p {
-    font-size: clamp(0.95rem, 2vw, 1.125rem); 
-    font-size: 20px;
-    color: var(--link-color);
-}
-*/
 .navigation {
     color: var(--text-color);
     position: sticky;
@@ -410,43 +374,6 @@ div iframe {
     background-color: #dddddd;
     margin: 0px !important;
     border: var(--text-color) 1px solid;
-}
-
-
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.scrollingSkillsContainer {
-    background-color: rgb(242, 244, 255);
-    overflow-x: hidden;
-    white-space: nowrap;
-    position: relative;
-    mask-image: linear-gradient(
-        to right,
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 1) 10%,
-        hsl(0 0% 0% / 1) 90%,
-        hsl(0 0% 0% / 0)
-    );
-}
-
-.scrollingSkills {
-    display: inline-block;
-    animation: slide 30s linear infinite;
-    will-change: transform;
-}
-
-.scrollingSkills img {
-    height: 10%;
-    padding-right: 80px;
-    transition: transform 0.3s ease;
 }
 
 footer {
