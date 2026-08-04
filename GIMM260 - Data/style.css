@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightskyblue !important;
+}
+
+header {
+    background-color: steelblue;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    display: flex !important;
+    height: 60px;
+    font-family: cursive;
+    background-color: steelblue;
+    justify-content: center !important;
+}
+
+header h1 i {
+    margin: 10px;
+    font-size: 3rem;
+    color: #ffffff;
+    animation: spin 10s linear infinite;
+}
+
+h1 {
+    display: flex !important;
+    background-color: lightblue;
+    font-size: 24px;
+    justify-content: center !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Narrative {
+    display: flex !important;
+    justify-content: center !important;
+    background-color: lightblue;
+    padding: 10px 25px 10px 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+iframe {
+    width: 70%;
+    height: 650px;
+    display: block;
+    margin: auto;
+    border: 3px solid steelblue !important;
+}
+
+
+
+#mapCountries {
+    display: flex;
+}
+
+#continentBarGraph {
+    margin: 0px 0px 0px 0px;
+    translate: 0px 0px;
+}
+
+#graphTitle {
+    align-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.Country {
+    opacity: 0.7;
+}
+
+.Country:hover {
+    opacity: 1;
+}
+
+#Continent {
+    font-size: 24px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+}
+
+#Continent:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+#CountryData {
+    font-size: 24px;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#CountryData:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+#CountryData option {
+    background-color: rgb(235, 235, 235);
+}
+
+
+
+#highestCount table {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+#highestCount td {
+    border-left: 2px solid #109aff;
+    border-right: 2px solid #109aff;
+}
+
+#highestCount tr:nth-child(odd){
+    background-color: #5cc0ff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#highestCount tr:nth-child(even){
+    font-size: 20px;
+}
+
+#highestCount tr:nth-child(2){
+    border-bottom: 2px solid #109aff;
+}
+
+
+
+select {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #fff;
+}
+
+select:focus {
+    border-color: #208fff;
+}
+
+
+
+svg > g {
+    stroke: black;
+    opacity: 0.8;
+}
+
+.tick text {
+    text-anchor: end;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.col-md-1 {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.col-md-2 {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+div input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+div input:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+div input:focus {
+    background-color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: grey;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+#react-data-table .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#react-data-table table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    margin: 0px;
+}
+
+#react-data-table th, #react-data-table td {
+    border: 1px solid steelblue;
+    text-align: center;
+    padding: 5px;
+}
+
+#react-data-table th {
+    background-color: steelblue;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#react-data-table tr:nth-child(even) {
+    background-color: #70b0ff;
+}
+
+#react-data-table tr:nth-child(odd) {
+    background-color: #80bbff;
+}
+
+
+
+@media (max-width: 768px) {
+    #Continent, #CountryData, #graphTitle {
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    #continentBarGraph {
+        translate: -20px -20px;
+    }
+
+    .Narrative {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .tick text {
+        font-size: 12px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    input, select {
+        margin-bottom: 5px;
+    }
+}
