@@ -1,9 +1,11 @@
 /* Define accessible colors */
 :root {
-    --link-color: #3B82F6; /* Default link color */
-    --link-hover-color: #10B981; /* Default hover color */
-    --background-color: #1F2937; /* Footer background color */
+    --link-color: skyblue; /* Default link color */
+    --link-hover-color: lightblue; /* Default hover color */
+    --nav-background-color: #191919; /* Navigation background color */
+    --background-color: #111111; /* Footer background color */
     --text-color: #FFFFFF; /* Text color */
+    --heading-color: dodgerblue; /* Heading color */
 }
 /* Add more contrasting colors for the 4.5:1 ratio*/
 
@@ -11,34 +13,108 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('/Photos/Filler\ Banner.jpg');
-    background-size: cover;
-}
-
-h1, h2, h3 {
-    padding-left: 10px;
-    color: #466be5;
-}
-
-h4 {
-    font-size: 30pt;
-    color: #1a4fa3;
-    font-weight: bold;
-    background-color: #ffffff50;
-}
-
-#projects, #skills, #previous {
-    scroll-margin-top: 100px;
+    background-color: var(--background-color);
 }
 
 a {
-    color: var(--link-color);
-    text-decoration: none;
+    padding: 5px 0px;
 }
 
-a:hover {
+.background-photo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Photos/Filler\ Banner.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+.nav-sidebar {
+    position: fixed;
+    left: 5%;
+    width: 15%;
+    height: 100%;
+    background-color: var(--nav-background-color);
+    color: var(--text-color);
+    padding: 20px;
+    z-index: 3;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.nav-sidebar a {
+    display: inline-block;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.nav-sidebar span {
+    display: inline-block;
+}
+
+.nav-item:hover a {
     color: var(--link-hover-color);
-    text-decoration: none;
+}
+
+.nav-item:hover span {
+    transform: scale(-1);
+}
+
+.nav-link {
+    padding: 3px 0;
+}
+
+.sub-link {
+    margin-left: 25px;
+    padding: 0px;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, max-height 0.2s ease;
+}
+
+.nav-item:hover .sub-link {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1.5rem;
+    pointer-events: auto;
+}
+
+.introduction {
+    position: relative;
+    width: 75%;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: var(--background-color); /* Dark background for contrast */
+}
+
+.intro-photo {
+    width: 100%;
+}
+
+.intro-text {
+    color: var(--text-color);
+    text-align: center;
+    font-size: clamp(0.95rem, 2vw, 1.125rem); 
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+
 }
 
 p {
@@ -53,10 +129,14 @@ div iframe {
     border: none;
 }
 
-.p-4 p {
-    font-size: clamp(0.95rem, 2vw, 1.125rem); 
-    font-size: 16pt;
-    color: var(--background-color);
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Skill-icon {
+    margin: 10px;
+    width: 22%;
 }
 
 .card-body iframe {
@@ -66,72 +146,8 @@ div iframe {
     zoom: 80%
 }
 
-.card-body {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%; /* cover the right column */
-    background-color: rgba(255,255,255,0.7);
-    overflow: hidden;
-    height: 0; /* hidden by default */
-    transition: height .5s ease, transform .5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 2;
-}
-
-/* Indicator visible above the card */
-.card-indicator {
-    position: absolute;
-    top: 0px;
-    transform: translateX(-50%);
-    color: var(--link-color);
-    padding: 6px;
-    cursor: pointer;
-    z-index: 3;
-    transition: transform .35s ease, opacity .2s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-text {
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity .3s ease, transform .3s ease;
-}
-
 .col-md-4 {
     padding: 5px;
-}
-
-.navigation {
-    color: var(--text-color);
-    position: sticky;
-    top: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 3;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: var(--text-color);
-}
-
-.navigation a {
-    float: center;
-    color: var(--link-color);
-    padding: 10px 20px;
-    font-weight: bold;
-}
-
-.navigation a:hover {
-    color: var(--link-hover-color);
-}
-
-.introPhoto {
-    width: 50%;
 }
 
 .mb-4 {
@@ -145,235 +161,36 @@ div iframe {
 }
 
 
-
+/*
 .accurate-weaponry {
     background-image: url('/Photos/Filler\ Banner.jpg');
     position: relative;
     overflow: hidden;
 }
 
-/* When overlay is visible, reveal text */
+/* When overlay is visible, reveal text 
 .accurate-weaponry:hover .card-text {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* hover/focus states rotate/move the indicator */
+/* hover/focus states rotate/move the indicator
 .accurate-weaponry:hover .card-indicator,
 .accurate-weaponry:focus .card-indicator,
 .accurate-weaponry:focus-visible .card-indicator {
     transform: translateX(-50%) translateY(8px) rotate(180deg);
 }
 
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
+/* Slide the overlay down to show content when hovering or focusing the whole card row 
 .accurate-weaponry:hover .card-body,
 .accurate-weaponry:focus .card-body,
 .accurate-weaponry:focus-visible .card-body {
     height: 100%;
 }
+*/
 
-
-
-.marine-training-simulator {
-    background-image: url('/Videos/Marine\ Training\ Simulator_Cover.png?v=1.1');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.marine-training-simulator:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.marine-training-simulator:hover .card-indicator,
-.marine-training-simulator:focus .card-indicator,
-.marine-training-simulator:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.marine-training-simulator:hover .card-body,
-.marine-training-simulator:focus .card-body,
-.marine-training-simulator:focus-visible .card-body {
-    height: 100%;
-}
-
-
-
-.brain-rot {
-    background-image: url('/Photos/Filler\ Banner.jpg');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.brain-rot:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.brain-rot:hover .card-indicator,
-.brain-rot:focus .card-indicator,
-.brain-rot:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.brain-rot:hover .card-body,
-.brain-rot:focus .card-body,
-.brain-rot:focus-visible .card-body {
-    height: 100%;
-}
-
-
-
-.soul-burden {
-    background-image: url('/Videos/Soul\ Burden_Title.png?v=1.1');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.soul-burden:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.soul-burden:hover .card-indicator,
-.soul-burden:focus .card-indicator,
-.soul-burden:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.soul-burden:hover .card-body,
-.soul-burden:focus .card-body,
-.soul-burden:focus-visible .card-body {
-    height: 100%;
-}
-
-
-
-.first-22-years {
-    background-image: url('/Videos/First22Years_Title.png?v=1.1');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.first-22-years:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.first-22-years:hover .card-indicator,
-.first-22-years:focus .card-indicator,
-.first-22-years:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.first-22-years:hover .card-body,
-.first-22-years:focus .card-body,
-.first-22-years:focus-visible .card-body {
-    height: 100%;
-}
-
-
-
-.twod-platformer {
-    background-image: url('/Videos/TwoD_PlatformerCover.png?v=1.1');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.twod-platformer:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.twod-platformer:hover .card-indicator,
-.twod-platformer:focus .card-indicator,
-.twod-platformer:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.twod-platformer:hover .card-body,
-.twod-platformer:focus .card-body,
-.twod-platformer:focus-visible .card-body {
-    height: 100%;
-}
-
-
-
-.ammonite {
-    background-image: url('/Videos/Ammonite_Title.png?v=1.1');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.ammonite:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.ammonite:hover .card-indicator,
-.ammonite:focus .card-indicator,
-.ammonite:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.ammonite:hover .card-body,
-.ammonite:focus .card-body,
-.ammonite:focus-visible .card-body {
-    height: 100%;
-}
-
-.first-rigging {
-    background-image: url('/Photos/Filler\ Banner.jpg');
-    position: relative;
-    overflow: hidden;
-}
-
-/* When overlay is visible, reveal text */
-.first-rigging:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* hover/focus states rotate/move the indicator */
-.first-rigging:hover .card-indicator,
-.first-rigging:focus .card-indicator,
-.first-rigging:focus-visible .card-indicator {
-    transform: translateX(-50%) translateY(8px) rotate(180deg);
-}
-
-/* Slide the overlay down to show content when hovering or focusing the whole card row */
-.first-rigging:hover .card-body,
-.first-rigging:focus .card-body,
-.first-rigging:focus-visible .card-body {
-    height: 100%;
-}
-
-.art {
-    text-align: center;
-}
-
-.art-gallery {
-    background-color: #dddddd;
-    margin: 0px !important;
-    border: var(--text-color) 1px solid;
+.fa {
+    padding-left: 20px;
 }
 
 footer {
@@ -381,7 +198,6 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 40px 0px;
-    border-top: 1px solid #374151;
 }
 
 footer a {
@@ -401,37 +217,4 @@ footer h3 {
 
 hr {
     border: 1px solid #a0a0a0;
-}
-
-
-
-@media (max-width: 768px) {
-    .parallax {
-        background-attachment: scroll;
-        height: 60vh;
-    }
-
-    .mb-4 {
-        flex-direction: column; /* stack columns */
-    }
-
-    .col-md-6 {
-        width: 100%;
-    }
-
-    .card-text {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .card-body {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .card-indicator {
-        display: none;
-    }
 }
