@@ -38,7 +38,7 @@ a {
     color: var(--text-color);
     padding: 20px;
     z-index: 3;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .nav-sidebar a {
@@ -86,7 +86,7 @@ a {
     width: 75%;
     margin-left: 20%;
     padding: 20px;
-    background-color: var(--background-color); /* Dark background for contrast */
+    background-color: var(--background-color);
 }
 
 .intro-photo {
@@ -96,10 +96,12 @@ a {
 .intro-text {
     color: var(--text-color);
     text-align: center;
-    font-size: clamp(0.95rem, 2vw, 1.125rem); 
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--heading-color);
 }
 
@@ -113,14 +115,10 @@ h2 {
     text-align: center;
 }
 
-h3 {
-
-}
-
 p {
     color: var(--text-color);
     text-align: center;
-    font-size: clamp(0.95rem, 2vw, 1.125rem); 
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
 }
 
 div iframe {
@@ -160,6 +158,9 @@ ul {
     text-align: center;
 }
 
+hr {
+    border: 1px solid #a0a0a0;
+}
 
 /*
 .accurate-weaponry {
@@ -197,24 +198,123 @@ footer {
     background-color: var(--background-color);
     color: var(--text-color);
     text-align: center;
-    padding: 40px 0px;
 }
 
-footer a {
+.resume-page {
+    color: var(--text-color);
+}
+
+.resume-page section {
+    margin-bottom: 24px;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.resume-page li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.resume-viewer embed {
+    width: 100%;
+    height: 1150px;
+}
+
+.resume-link {
     color: var(--link-color);
-    text-decoration: none;
 }
 
-footer a:hover {
+.resume-link:hover {
     color: var(--link-hover-color);
 }
 
-footer h3 {
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: var(--link-color);
+.footer-message-form {
+    max-width: 420px;
+    margin: 24px auto 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
 }
 
-hr {
-    border: 1px solid #a0a0a0;
+.footer-message-form input,
+.footer-message-form textarea,
+.footer-message-form button {
+    padding: 10px;
+    border: 1px solid var(--link-color);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.footer-message-form button {
+    background-color: var(--link-color);
+    color: #111;
+    cursor: pointer;
+}
+
+.footer-message-form button:hover {
+    background-color: var(--link-hover-color);
+}
+
+.message-board {
+    max-width: 420px;
+    margin: 16px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.message-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.message-card p {
+    margin: 6px 0 0;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(17, 17, 17, 0.95);
+    color: var(--text-color);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    z-index: 1000;
+    border-top: 1px solid var(--link-color);
+    flex-wrap: wrap;
+}
+
+.cookie-consent-banner p {
+    margin: 0;
+    text-align: left;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-consent-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--link-color);
+    color: #111;
+}
+
+.cookie-consent-actions button:hover {
+    background-color: var(--link-hover-color);
 }
