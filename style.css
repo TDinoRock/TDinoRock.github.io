@@ -1,12 +1,19 @@
 /* Define accessible colors */
 :root {
-    --link-color: skyblue; /* Default link color */
-    --link-hover-color: lightblue; /* Default hover color */
-    --nav-background-color: #191919; /* Navigation background color */
-    --background-color: #111111; /* Footer background color */
-    --text-color: #FFFFFF; /* Text color */
-    --heading-color: dodgerblue; /* Heading color */
+    --link-color: skyblue;
+    /* Default link color */
+    --link-hover-color: lightblue;
+    /* Default hover color */
+    --nav-background-color: #191919;
+    /* Navigation background color */
+    --background-color: #111111;
+    /* Footer background color */
+    --text-color: #FFFFFF;
+    /* Text color */
+    --heading-color: dodgerblue;
+    /* Heading color */
 }
+
 /* Add more contrasting colors for the 4.5:1 ratio*/
 
 body {
@@ -64,6 +71,7 @@ a {
 }
 
 .sub-link {
+    display: block !important;
     margin-left: 25px;
     padding: 0px;
     opacity: 0;
@@ -75,6 +83,7 @@ a {
 }
 
 .nav-item:hover .sub-link {
+    display: block;
     opacity: 1;
     visibility: visible;
     max-height: 1.5rem;
@@ -123,7 +132,7 @@ ul {
 }
 
 .Skill-icon {
-    margin: 10px;
+    margin: 0px 10px;
     width: 22%;
 }
 
@@ -225,7 +234,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--nav-background-color);
+    background-color: var(--heading-color);
     color: var(--text-color);
     padding: 16px 20px;
     display: flex;

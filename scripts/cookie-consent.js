@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const consentKey = 'portfolio-cookie-consent';
     const visitKey = 'portfolio-visit-count';
+    const cookieDays = 2;
 
     function getCookie(name) {
         const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/\+^])/g, '\\$1') + '=([^;]*)'));
@@ -30,13 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(banner);
 
         document.getElementById('cookie-accept').addEventListener('click', () => {
-            setCookie(consentKey, 'accepted', 365);
-            setCookie(visitKey, '1', 365);
+            setCookie(consentKey, 'accepted', cookieDays);
+            setCookie(visitKey, '1', cookieDays);
             banner.remove();
         });
 
         document.getElementById('cookie-reject').addEventListener('click', () => {
-            setCookie(consentKey, 'rejected', 365);
+            setCookie(consentKey, 'rejected', cookieDays);
             banner.remove();
         });
     }
@@ -49,6 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (consent === 'accepted') {
-        setCookie(visitKey, String(visitCount + 1), 365);
+        setCookie(visitKey, String(visitCount + 1), cookieDays);
     }
 });
