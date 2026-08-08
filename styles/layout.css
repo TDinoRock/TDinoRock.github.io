@@ -1,0 +1,43 @@
+/* Main layout */
+.introduction {
+    position: relative;
+    width: 75%;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.resume-page {
+    color: var(--text-color);
+}
+
+.resume-page section {
+    margin-bottom: 24px;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.resume-page li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.resume-viewer embed {
+    width: 100%;
+    height: 1150px;
+}
+
+.resume-link {
+    color: var(--link-color);
+}
+
+.resume-link:hover {
+    color: var(--link-hover-color);
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
