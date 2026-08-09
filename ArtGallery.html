@@ -1,0 +1,90 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" defer rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
+            rel="preconnect" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <title>Trennon Talbot Portfolio</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <!-- Added defer to the script tag to ensure the DOM is fully loaded before executing the script -->
+        <!-- rel="preconnect" to optimize loading performance. -->
+        <!-- add '?v=1.0' to local connections and photos -->
+    </head>
+
+    <body>
+        <div class="background-photo"></div>
+        <div id="site-nav"></div>
+
+        <main class="introduction" id="intro">
+
+            <div class="container-fluid my-5">
+            <h2>My Artwork</h2>
+
+            <div class="art-gallery-section">
+
+                <div class="art-carousel" aria-label="Art gallery slideshow">
+                    <button class="art-gallery-arrow art-gallery-arrow-left" type="button"
+                        aria-label="Previous image">&#10094;</button>
+
+                    <div id="art-gallery-previous" class="art-gallery-previous" aria-live="polite"></div>
+                    <div id="art-gallery-active" class="art-gallery-active" aria-live="polite"></div>
+                    <div id="art-gallery-next" class="art-gallery-next" aria-live="polite"></div>
+
+                    <button class="art-gallery-arrow art-gallery-arrow-right" type="button"
+                        aria-label="Next image">&#10095;</button>
+                </div>
+            </div>
+        </main>
+
+        <br>
+
+        <footer>
+            <br>
+            <div id="contact-me">
+                <h1>Contact Me</h1>
+
+                <form id="message-form" class="footer-message-form">
+                    <label for="message-name">Name</label>
+                    <input id="message-name" name="name" type="text" maxlength="40" placeholder="Your name" required>
+
+                    <label for="message-email">Email</label>
+                    <input id="message-email" name="email" type="email" maxlength="80" placeholder="Your email"
+                        required>
+
+                    <label for="message-subject">Subject</label>
+                    <input id="message-subject" name="subject" type="text" maxlength="80" placeholder="Message subject"
+                        required>
+
+                    <label for="message-text">Message</label>
+                    <textarea id="message-text" name="message" rows="3" maxlength="160" placeholder="Leave a short note"
+                        required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div id="message-board" class="message-board" aria-live="polite"></div>
+
+                <p>&copy; 2026 Trennon Talbot. All rights reserved.</p>
+                <br>
+            </div>
+        </footer>
+
+        <script src="scripts/site-nav.js"></script>
+        <script src="scripts/portfolio-utils.js"></script>
+        <script src="scripts/footer-message.js"></script>
+        <script src="scripts/cookie-consent.js"></script>
+        <script src="scripts/art-gallery.js"></script>
+    </body>
+
+    </html>

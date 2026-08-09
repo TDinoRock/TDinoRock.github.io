@@ -1,0 +1,101 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" defer rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
+            rel="preconnect" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <title>Trennon Talbot Portfolio</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <!-- Added defer to the script tag to ensure the DOM is fully loaded before executing the script -->
+        <!-- rel="preconnect" to optimize loading performance. -->
+        <!-- add '?v=1.0' to local connections and photos -->
+    </head>
+
+    <body>
+        <div class="background-photo"></div>
+        <div id="site-nav"></div>
+
+        <main class="introduction" id="intro">
+
+            <div class="container-fluid my-5">
+                <h2>First 22 Years</h2>
+                <img src="Videos/First22Years.mp4" alt="First 22 Years" class="img-fluid mb-4">
+
+                <div class="row first-22-years" tabindex="0" aria-expanded="false">
+                    <div class="col-md-6 p-4 order-1 order-md-1">
+                        <div>
+                            <iframe src="https://www.youtube.com/embed/PxLwbePN-O8?rel=0&controls=0"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-4 order-2 order-md-2">
+                        <p class="first-22-years-text">
+                            First 22 Years is a rotoscoped short film that follows the first 22 years of a woman’s life.
+                            The
+                            project required extensive editing and compositing, and it provided valuable experience in
+                            production workflow, shot planning, and post-production techniques. Because the footage was
+                            not
+                            captured against a green screen, the rotoscoping process was significantly more
+                            time-intensive,
+                            reinforcing the importance of pre-production planning and efficient shooting methods. This
+                            project strengthened my understanding of visual storytelling and the technical
+                            considerations
+                            required to produce a polished final piece.
+                            <br>
+                            <br>
+                            <br>
+                            Made in Adobe Photoshop, Premiere Pro, After Effects, and Blender
+                        </p>
+                    </div>
+                </div>
+        </main>
+
+        <br>
+
+        <footer>
+            <br>
+            <div id="contact-me">
+                <h1>Contact Me</h1>
+
+                <form id="message-form" class="footer-message-form">
+                    <label for="message-name">Name</label>
+                    <input id="message-name" name="name" type="text" maxlength="40" placeholder="Your name" required>
+
+                    <label for="message-email">Email</label>
+                    <input id="message-email" name="email" type="email" maxlength="80" placeholder="Your email"
+                        required>
+
+                    <label for="message-subject">Subject</label>
+                    <input id="message-subject" name="subject" type="text" maxlength="80" placeholder="Message subject"
+                        required>
+
+                    <label for="message-text">Message</label>
+                    <textarea id="message-text" name="message" rows="3" maxlength="160" placeholder="Leave a short note"
+                        required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div id="message-board" class="message-board" aria-live="polite"></div>
+
+                <p>&copy; 2026 Trennon Talbot. All rights reserved.</p>
+                <br>
+            </div>
+        </footer>
+
+        <script src="scripts/site-nav.js"></script>
+        <script src="scripts/footer-message.js"></script>
+        <script src="scripts/cookie-consent.js"></script>
+    </body>
+
+    </html>

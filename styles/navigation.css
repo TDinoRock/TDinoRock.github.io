@@ -33,6 +33,10 @@
     padding: 3px 0;
 }
 
+.nav-link:focus {
+    color: var(--link-color);
+}
+
 .sub-link {
     display: block !important;
     margin-left: 25px;
@@ -42,13 +46,20 @@
     max-height: 0;
     overflow: hidden;
     pointer-events: none;
+    text-decoration: none;
     transition: opacity 0.2s ease, max-height 0.2s ease;
 }
 
-.nav-item:hover .sub-link {
+.sub-link:hover {
+    text-decoration: underline;
+}
+
+.nav-item:focus-within .sub-link {
     display: block;
     opacity: 1;
     visibility: visible;
     max-height: 1.5rem;
     pointer-events: auto;
 }
+
+
