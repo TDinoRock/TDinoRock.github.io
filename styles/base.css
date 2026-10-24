@@ -69,7 +69,23 @@ hr {
     font-size: clamp(0.95rem, 2vw, 1.125rem);
 }
 
-.Skill-icon {
-    margin: 0px 10px;
-    width: 22%;
+.tool-icons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    margin: 20px 0;
+}
+.tool-icons .Skill-icon {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 84px;
+    margin: 0;
+    object-fit: contain;
+    background: transparent;
+}
+@media (max-width: 680px) {
+    .tool-icons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tool-icons .Skill-icon { height: 64px; }
 }
