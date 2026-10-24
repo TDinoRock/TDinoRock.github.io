@@ -2,6 +2,7 @@
     const navMarkup = `
         <aside class="nav-sidebar">
             <div>
+                <a class="brand-mark" href="index.html#intro" aria-label="Trennon Talbot home"><img src="Photos/tt-brand-logo.png" alt="TT angular geometric logo" width="154" height="132"></a>
                 <h1><a href="index.html#intro">Trennon Talbot</a></h1>
                 <h2><a href="index.html#recent">Game Designer</a></h2>
 

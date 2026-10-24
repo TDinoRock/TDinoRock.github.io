@@ -63,3 +63,11 @@
 }
 
 
+
+/* TT brand identity */
+.brand-mark{display:block!important;text-align:center;padding:0 0 12px;}
+.brand-mark img{display:block;width:min(100%,154px);height:auto;margin:auto;filter:drop-shadow(0 5px 12px rgba(0,188,208,.25));}
+.nav-sidebar{border-right:2px solid #087f99;}
+.nav-sidebar h1{font-size:clamp(1.15rem,1.6vw,1.7rem);}
+.nav-sidebar h2{font-size:clamp(.95rem,1.2vw,1.2rem);}
+@media(max-width:900px){.nav-sidebar{left:0;width:22%;padding:12px}.brand-mark img{width:100%;max-width:95px}.introduction{margin-left:23%;width:77%}}

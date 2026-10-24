@@ -1,11 +1,11 @@
 /* Base styles */
 :root {
-    --link-color: skyblue;
-    --link-hover-color: lightblue;
-    --nav-background-color: #191919;
-    --background-color: #111111;
+    --link-color: #4ad9ed;
+    --link-hover-color: #a5f4ff;
+    --nav-background-color: #071b38;
+    --background-color: #091626;
     --text-color: #FFFFFF;
-    --heading-color: dodgerblue;
+    --heading-color: #38cde6;
 }
 
 body {
