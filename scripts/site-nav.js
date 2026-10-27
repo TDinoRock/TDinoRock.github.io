@@ -18,7 +18,7 @@
                     rel="noopener noreferrer">
                     <i class="fa fa-youtube-play fa-2x"></i>
                 </a>
-                <a href="Resume - Trennon Talbot.pdf" target="_blank" aria-label="Resume" rel="noopener noreferrer">
+                <a href="Resume New - Trennon Talbot.pdf" target="_blank" aria-label="Resume" rel="noopener noreferrer">
                     <i class="fa fa-file-pdf-o fa-2x"></i>
                 </a>
 
